@@ -17,10 +17,12 @@ Sub データ統合()
         Workbooks.Open パス & ファイル名
 
         ' 指定ファイルのデータ数をカウントする
-        データ数 = Range("A1").Current#Region.Rows.Count - 1
+        データ数 = Range("A1").CurrentRegion.Rows.Count - 1
         ' データ数を表示する
         MsgBox ファイル名 & " : " & データ数
         ' メッセージボックスの「OK」が押されたら開いたブックを閉じる
         ActiveWorkbook.Close
+        ' 次に見つかったブックの名前を変数に代入する
+        ファイル名 = Dir
     Loop
 End Sub

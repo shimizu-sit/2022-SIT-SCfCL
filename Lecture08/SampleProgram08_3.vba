@@ -9,7 +9,7 @@ Sub データ統合()
     Dim データ数 As Long
     
     ' パスはC4，C5，C6に入力されているのでそれぞれを繋げる
-    パス = Range("C4").Value & "\" & Range("C5").Value & "\" & Range("C6").Value & "\"
+    パス = Range("C4").Value & "¥" & Range("C5").Value & "¥" & Range("C6").Value & "¥"
     ' 今回はファイル名はプログラム内で指定する
     ファイル名 = "東京_0107.xlsx"
     
